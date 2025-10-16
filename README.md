@@ -1,10 +1,28 @@
 # Creating an empty scene
 from: https://isaac-sim.github.io/IsaacLab/main/source/tutorials/index.html > https://isaac-sim.github.io/IsaacLab/main/source/tutorials/00_sim/create_empty.html
 
-## Install Isaac Lab
-from: https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/index.html#local-installation > https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/binaries_installation.html#isaaclab-binaries-installation 
+## Pre requisites
+
+- Install Conda
+
+- Create a Conda env inside an Ubuntu terminal that runs python 3.11 > compatible with IsaacSIM 5.0
+```
+conda create -n env_isaaclab python=3.11
+conda activate env_isaaclab
+```
+
+- Install PyTorch
+```
+pip install torch==2.7.0 torchvision==0.22.0 --index-url https://download.pytorch.org/whl/cu128
+```
+
+- Install Isaac SIM 5.0
+```
+pip install "isaacsim[all,extscache]==5.0.0" --extra-index-url https://pypi.nvidia.com
+```
 
 - Test that Isaac SIM is properly installed
+from: https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/binaries_installation.html#isaaclab-binaries-installation
 
 On a Windows command prompt, run:
 ```
@@ -18,9 +36,13 @@ set ISAACSIM_PYTHON_EXE=%ISAACSIM_PATH%\python.bat
 
 It should launch Isaac SIM
 
-- Installing Isaac Lab
-
+## Install Isaac Lab
+from: https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/index.html#local-installation > 
 https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/pip_installation.html 
+
+
+
+
 
 
 ## Launch the Simulator
