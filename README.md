@@ -20,6 +20,7 @@ It should launch Isaac SIM
 
 - Installing Isaac Lab
 
+https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/pip_installation.html 
 
 
 ## Launch the Simulator
