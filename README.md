@@ -4,7 +4,8 @@ from: https://isaac-sim.github.io/IsaacLab/main/source/tutorials/index.html > ht
 ## Pre requisites
 
 - Install Conda
-
+- Install Ubuntu 
+- open an Ubuntu CLI terminal
 - Create a Conda env inside an Ubuntu terminal that runs python 3.11 > compatible with IsaacSIM 5.0
 ```
 conda create -n env_isaaclab python=3.11
@@ -16,23 +17,23 @@ conda activate env_isaaclab
 pip install torch==2.7.0 torchvision==0.22.0 --index-url https://download.pytorch.org/whl/cu128
 ```
 
+- Install Vulkan tools
+```
+sudo apt install vulkan-tools
+```
+
+- Make sure you have the latest NVIDIA driver installed
+. check it here: https://www.nvidia.com/en-us/drivers/
+
 - Install Isaac SIM 5.0
 ```
 pip install "isaacsim[all,extscache]==5.0.0" --extra-index-url https://pypi.nvidia.com
 ```
 
 - Test that Isaac SIM is properly installed
-from: https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/binaries_installation.html#isaaclab-binaries-installation
 
-On a Windows command prompt, run:
-```
-set ISAACSIM_PATH=[INSERT YOUR LOCAL PATH TO WHERE ISAAC SIM IS INSTALLED IN YOUR COMPUTER]
-set ISAACSIM_PYTHON_EXE=%ISAACSIM_PATH%\python.bat
-%ISAACSIM_PATH%\isaac-sim.bat
-%ISAACSIM_PYTHON_EXE% -c "print('Isaac Sim configuration is now complete.')"
-%ISAACSIM_PYTHON_EXE% %ISAACSIM_PATH%\standalone_examples\api\omni.isaac.core\add_cubes.py
-```
--> **Documentation Mistakes** The original Nvidia documentation has "%ISAACSIM_PYTHON_EXE% %ISAACSIM_PATH%\standalone_examples\api\isaacsim.core.api\add_cubes.py" this is the wrong path. This command should be replaced by "%ISAACSIM_PYTHON_EXE% %ISAACSIM_PATH%\standalone_examples\api\omni.isaac.core\add_cubes.py"
+
+
 
 It should launch Isaac SIM
 
